@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import Landing from "../sections/Landing";
 import Services from "../sections/Services";
 import AccordionPage from "../components/AccordionPage";
+import Slider from "@/src/components/Slider";
 export default function Home() {
   return (
     <div className="w-full h-full bg-amber-50">
@@ -13,6 +14,8 @@ export default function Home() {
         <h1 className="text-lg lg:text-2xl"> ხშირად დასმული კითხვები</h1>
         <AccordionPage />
       </div>
+
+      <Slider />
     </div>
   );
 }
