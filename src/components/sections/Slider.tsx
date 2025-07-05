@@ -1,5 +1,8 @@
 "use client";
-
+import image1 from "@/src/assets/images/wmendax.jpg";
+import image2 from "@/src/assets/images/wmendax.jpg";
+import image3 from "@/src/assets/images/wmendax.jpg";
+import image4 from "@/src/assets/images/wmendax.jpg";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,32 +10,43 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    title: "Summer Sale Collection",
-    description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/247204/pexels-photo-247204.jpeg?auto=compress&cs=tinysrgb&w=600",
-    url: "/",
+    title: "კონდენციონერის მონტაჟი",
+    mob: "598 - 24 - 22 -20",
+    img: image1,
+    url: "/installation",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
   {
     id: 2,
-    title: "Winter Sale Collection",
-    description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=600",
-    url: "/",
+    title: "კონდენციონერის შეკეთება",
+    mob: "598 - 24 - 22 -20",
+    img: image2,
+    url: "/repair",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
   {
     id: 3,
-    title: "Spring Sale Collection",
-    description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/1144834/pexels-photo-1144834.jpeg?auto=compress&cs=tinysrgb&w=600",
-    url: "/",
+    title: "კონდენციონერი წმენდა",
+    mob: "598 - 24 - 22 -20",
+    img: image3,
+    url: "/cleaning",
+    bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
+  },
+
+  {
+    id: 4,
+    title: "ფრეონის დამატება",
+    mob: "598 - 24 - 22 -20",
+    img: image4,
+    url: "/adding-freon",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
 ];
 
 function Slider() {
   const [current, setCurrent] = useState(0);
+
+  console.log("current ", current);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -43,7 +57,19 @@ function Slider() {
   // }, []);
 
   return (
-    <div className="h-[calc(100vh-80px)] overflow-hidden relative">
+    <div className="hidden sm:block h-[calc(100vh-80px)] overflow-hidden relative  mb-24">
+      <div
+        className="absolute top-1/2 right-4 z-50 bg-black/20 rounded-full text-white px-4 py-3 text-2xl text-center cursor-pointer"
+        onClick={() => setCurrent(current < 3 ? current + 1 : current)}
+      >
+        &rarr;
+      </div>
+      <div
+        className="absolute top-1/2 left-4 z-50 bg-black/20 rounded-full text-white px-4 py-3 text-2xl text-center cursor-pointer"
+        onClick={() => setCurrent(current > 0 ? current - 1 : current)}
+      >
+        &larr;
+      </div>
       <div
         className="w-max h-full flex transition-all ease-in-out duration-1500"
         style={{ transform: `translateX(-${current * 100}vw)` }}
@@ -54,16 +80,17 @@ function Slider() {
             key={slide.id}
           >
             {/* TEXT CONTAINER */}
-            <div className="h-1/2 xl:w-1/2 xl:h-full relative flex items-center justify-center text-center gap-8 flex-col 2xl:gap-12 ">
-              <h2 className="text-xl  lg:text-3xl 2xl:text-5xl">
-                {slide.description}
-              </h2>
-              <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold">
+            <div className="flex h-1/2 xl:w-1/2 xl:h-full relative  items-center justify-center text-center gap-2 sm:gap-8 flex-col 2xl:gap-12 ">
+              <h1 className="text-3xl lg:text-5xl 2xl:text-7xl font-semibold">
                 {slide.title}
               </h1>
+              <h2 className="text-xl cursor-pointer lg:text-3xl 2xl:text-5xl">
+                <Link href={`tel:${slide.mob}`}>598 - 24 - 22 - 20</Link>
+              </h2>
+
               <Link href={slide.url}>
-                <button className="rounded-md bg-black text-white px-4">
-                  Shop now
+                <button className="rounded-md bg-black text-white px-4 py-2 cursor-pointer hover:text-black hover:bg-white border border-black transition duration-200">
+                  იხილეთ დეტალურად
                 </button>
               </Link>
             </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
@@ -37,6 +37,14 @@ const VARIANTS = {
 
 export default function BurgerMenu({ isOpen }: { isOpen: boolean }) {
   const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  }, [isOpen]);
 
   return (
     <div className="grid h-auto place-content-center bg-transparent ">
