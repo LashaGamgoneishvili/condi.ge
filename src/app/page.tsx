@@ -9,7 +9,10 @@ export default function Home() {
       <Slider />
       <Services />
       <div className="flex flex-col gap-4 lg:gap-8 items-center justify-center px-4 lg:px-16 ">
-        <h1 className="text-lg lg:text-2xl"> ხშირად დასმული კითხვები</h1>
+        <h1 className="text-lg lg:text-3xl">
+          {" "}
+          <strong>ხშირად დასმული კითხვები</strong>{" "}
+        </h1>
         <AccordionPage />
       </div>
     </div>

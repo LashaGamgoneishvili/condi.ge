@@ -1,8 +1,8 @@
 "use client";
 import image1 from "../../../public/assets/images/installation.jpg";
-import image2 from "../../../public/assets/images/installation.jpg";
-import image3 from "../../../public/assets/images/installation.jpg";
-import image4 from "../../../public/assets/images/installation.jpg";
+import image2 from "../../../public/assets/images/sheketeba.jpg";
+import image3 from "../../../public/assets/images/wmenda.jpg";
+import image4 from "../../../public/assets/images/freoni.png";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -46,13 +46,13 @@ const slides = [
 function Slider() {
   const [current, setCurrent] = useState(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  //   }, 5000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 7000);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="hidden sm:block h-[calc(100vh-80px)] overflow-hidden relative  mb-24">

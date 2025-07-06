@@ -2,7 +2,7 @@ import Image from "next/image";
 import image4 from "../../../public/assets/images/installation.jpg";
 import Link from "next/link";
 
-export default function page() {
+export default function Page() {
   return (
     <div className="min-h-screen flex flex-col items-center mt-8">
       <strong className="text-sm md:text-xl lg:text-2xl mb-4">

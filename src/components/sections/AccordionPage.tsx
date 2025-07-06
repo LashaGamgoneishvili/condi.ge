@@ -56,7 +56,7 @@ export default function AccordionPage() {
     <Accordion
       type="single"
       collapsible
-      className="w-full"
+      className="w-full px-48"
       defaultValue="item-1"
     >
       {data.map((data, i) => (

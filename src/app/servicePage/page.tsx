@@ -1,43 +1,62 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import installation from "../../../public/assets/images/installation.jpg";
+import repair from "../../../public/assets/images/sheketeba.jpg";
+import cleaning from "../../../public/assets/images/wmenda.jpg";
+import addingFreon from "../../../public/assets/images/freoni.png";
+import Image from "next/image";
+import { redirect } from "next/navigation";
+import Link from "next/link";
 
 const services = [
   {
     id: 1,
     title: "მონტაჟი",
     description:
-      "ჩვენი ძალდატა პასუხისმგებლობის დონეა და პროფესიონალიზმი. ჩვენი გარანტია გრძელდება 2 წლამდე. ღირებული რადიუსის გათვლით, რომ მივუახლოვდეთ სწრაფად, ყველასთვის და შეაამბლულ ვაუცანებთ წყალმევლით შიდასაწესი.",
-    image: "/api/placeholder/300/200",
-    buttonText: "დაკლიკებზე",
+      "ჩვენი მაღალი პროფესიონალიზმის დონე და გამართული პროცესინალური გუნდი გარანტიას გაძლევთ, რომ მიიღებთ სუფთა, ეფექტურ და შენარჩუნებულ ვენტილაციის სისტემას.",
+    image: installation,
+    buttonText: "დეტალურად",
+    url: "/installation",
   },
   {
     id: 2,
     title: "შეკეთება",
     description:
-      "კონდიციონერების რემონტი – სამყარო, ხარისხიანი და სწრაფი! ჩვენი დეზიბული ოქმები ამორტიზებული იწყება სწორად მომსვლელი კონდიციონერით!",
-    image: "/api/placeholder/300/200",
-    buttonText: "დაკლიკებზე",
+      "კონდიციონერების შეკეთება – სანდოდ, ხარისხიანად და სწრაფად!ცხელ დღეებში თქვენი კომფორტი იწყება სწორად მოქმედი კონდიციონერით! გთავაზობთ კონდიციონერების პროფესიონალურ შეკეთებასა და ტექნიკურ მომსახურებას თბილისსა და რუსთავში.",
+
+    image: repair,
+    buttonText: "დეტალურად",
+    url: "/repair",
   },
   {
     id: 3,
     title: "წმენდა",
     description:
-      "კონდიციონერის რეგულარული გწმენდა უაღრეს სეზონეს საწინას, ამონადნი სისუფთავე და მოწყობილობის საჭიროდ ოთმობის უზრუნველყოფა.",
-    image: "/api/placeholder/300/200",
-    buttonText: "დაკლიკებზე",
+      "🔧 წმენდაკონდიციონერის რეგულარული გაწმენდა აუცილებელია ჰაერის ხარისხის, ენერგოეფექტურობისა და მოწყობილობის ხანგრძლივ მუშაობის უზრუნველსაყოფად. ვასუფთავებთ ფილტრებს, ორთქლის გამცივრებელს და დრენაჟის სისტემას სპეციალური საშუალებებით, რაც ხელს უშლის მტვრის, სოკოსა და ბაქტერიების დაგროვებას.",
+    image: cleaning,
+    buttonText: "დეტალურად",
+    url: "/cleaning",
   },
   {
     id: 4,
     title: "ფრების დამატება",
     description:
-      "თუ კონდიციონერი არ კარგად ყრუებს ატოსფერო სატევის ბურთას, ღანერისაცავი ფრონი (საწრადლები გაზის) შეშება.",
-    image: "/api/placeholder/300/200",
-    buttonText: "დაკლიკებზე",
+      "🌀 ფრეონის დამატება თუ კონდიციონერი აღარ აგრილებს ეფექტურად, შესაძლებელია საჭირო იყოს ფრეონის (საგრილებელი გაზის) შევსება. ვიყენებთ ხარისხიან და სერტიფიცირებულ ფრეონს, ვამოწმებთ გაჟონვის ადგილებს და უზრუნველვყოფთ სისტემის უსაფრთხო მუშაობას.",
+    image: addingFreon,
+    buttonText: "დეტალურად",
+    url: "/addingFreon",
   },
 ];
 
-export default function Home() {
+export default function Page() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  function handleRoute(path: string) {
+    console.log("path", path);
+    console.log("baseUrl", baseUrl);
+    redirect(`${baseUrl}${path}`);
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -48,24 +67,25 @@ export default function Home() {
             კონდიციონერების სერვისი
           </h1>
           <p className="text-gray-600 text-center mt-2">
-            პროფესიონალური მომსახურება თბილისში
+            პროფესიონალური მომსახურება თბილისსა და რუსთავში
           </p>
         </div>
       </header>
 
       {/* Services Grid */}
-      <main className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <main className="max-w-7xl mx-auto px-4 py-12 cursor-pointer">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {services.map((service) => (
             <div
               key={service.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
               onMouseEnter={() => setHoveredCard(service.id)}
               onMouseLeave={() => setHoveredCard(null)}
+              onClick={() => handleRoute(service.url)}
             >
               {/* Service Image */}
               <div className="relative h-48 bg-gray-200 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-gray-600 flex items-center justify-center">
                   {service.id === 1 && (
                     <div className="text-white text-6xl">🔧</div>
                   )}
@@ -80,12 +100,16 @@ export default function Home() {
                   )}
                 </div>
                 {hoveredCard === service.id && (
-                  <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300"></div>
+                  <Image
+                    src={service.image}
+                    alt="service image"
+                    className="absolute inset-0 bg-black bg-opacity-20 transition-all duration-300"
+                  />
                 )}
               </div>
 
               {/* Service Content */}
-              <div className="p-6">
+              <div className="p-6 flex justify-center items-center flex-col">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {service.title}
                 </h3>
@@ -94,9 +118,12 @@ export default function Home() {
                 </p>
 
                 {/* CTA Button */}
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                <Link
+                  href={`/${service.url}`}
+                  className="w-full cursor-pointer text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                >
                   {service.buttonText}
-                </button>
+                </Link>
               </div>
             </div>
           ))}

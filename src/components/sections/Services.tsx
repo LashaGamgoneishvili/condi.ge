@@ -1,8 +1,8 @@
 "use client";
 import image1 from "../../../public/assets/images/installation.jpg";
-import image2 from "../../../public/assets/images/installation.jpg";
-import image3 from "../../../public/assets/images/installation.jpg";
-import image4 from "../../../public/assets/images/installation.jpg";
+import image2 from "../../../public/assets/images/sheketeba.jpg";
+import image3 from "../../../public/assets/images/wmenda.jpg";
+import image4 from "../../../public/assets/images/freoni.png";
 import Link from "next/link";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
@@ -97,7 +97,7 @@ export default function Services() {
               onTouchEnd={handleTouchEnd}
             >
               <div className="w-full h-full flex flex-col justify-center items-center gap-8 lg:gap-14">
-                <p className="text-black/90  text-center text-2xl lg:text-5xl font-bold">
+                <p className="text-white text-center text-2xl lg:text-5xl font-bold bg-black/50 rounded-2xl px-4 py-2">
                   <strong>{slide.title}</strong>
                 </p>
                 <Link
