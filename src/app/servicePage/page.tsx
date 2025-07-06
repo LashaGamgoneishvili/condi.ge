@@ -44,7 +44,7 @@ const services = [
       "🌀 ფრეონის დამატება თუ კონდიციონერი აღარ აგრილებს ეფექტურად, შესაძლებელია საჭირო იყოს ფრეონის (საგრილებელი გაზის) შევსება. ვიყენებთ ხარისხიან და სერტიფიცირებულ ფრეონს, ვამოწმებთ გაჟონვის ადგილებს და უზრუნველვყოფთ სისტემის უსაფრთხო მუშაობას.",
     image: addingFreon,
     buttonText: "დეტალურად",
-    url: "/addingFreon",
+    url: "/adding-freon",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Page() {
   function handleRoute(path: string) {
     console.log("path", path);
     console.log("baseUrl", baseUrl);
-    redirect(`${baseUrl}${path}`);
+    redirect(`${path}`);
   }
 
   return (
@@ -118,12 +118,9 @@ export default function Page() {
                 </p>
 
                 {/* CTA Button */}
-                <Link
-                  href={`${service.url}`}
-                  className="w-full cursor-pointer text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                >
+                <button className="w-full cursor-pointer text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                   {service.buttonText}
-                </Link>
+                </button>
               </div>
             </div>
           ))}
