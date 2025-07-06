@@ -57,13 +57,13 @@ function Slider() {
   return (
     <div className="hidden sm:block h-[calc(100vh-80px)] overflow-hidden relative  mb-24">
       <div
-        className="absolute top-1/2 right-4 z-50 bg-black/20 rounded-full text-white px-4 py-3 text-2xl text-center cursor-pointer"
+        className="absolute top-1/2 -translate-y-1/2 right-4 z-50 bg-black/20 rounded-full text-white px-4 py-3 text-2xl text-center cursor-pointer"
         onClick={() => setCurrent(current < 3 ? current + 1 : current)}
       >
         &rarr;
       </div>
       <div
-        className="absolute top-1/2 left-4 z-50 bg-black/20 rounded-full text-white px-4 py-3 text-2xl text-center cursor-pointer"
+        className="absolute top-1/2 -translate-y-1/2 left-4 z-50 bg-black/20 rounded-full text-white px-4 py-3 text-2xl text-center cursor-pointer"
         onClick={() => setCurrent(current > 0 ? current - 1 : current)}
       >
         &larr;
@@ -105,7 +105,7 @@ function Slider() {
           </div>
         ))}
       </div>
-      <div className="absolute m-auto left-1/2 bottom-8 flex gap-4">
+      <div className="absolute m-auto left-1/2 translate-x-1/2 bottom-8 flex gap-4">
         {slides.map((slide, index) => (
           <div
             className={`w-3 h-3 rounded-full ring-1 ring-gray-600 cursor-pointer flex items-center justify-center ${
