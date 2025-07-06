@@ -2,11 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import logoImage from "@/src/assets/images/Bild2.png";
-import FacebookIcon from "@/src/assets/images/icons8-facebook-60.svg";
+import logoImage from "../../public/assets/images/Bild2.png";
+import FacebookIcon from "../../public/assets/images/icons8-facebook-60.svg";
 import { twMerge } from "tailwind-merge";
 import BurgerMenu from "./BurgerMenu";
-import { motion } from "framer-motion";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -30,8 +29,6 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
-
-  console.log("isOpen", isOpen);
 
   return (
     <header

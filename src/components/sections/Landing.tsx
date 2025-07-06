@@ -4,7 +4,9 @@ import Link from "next/link";
 
 export default function Landing() {
   return (
-    <section className="h-screen w-full bg-[url(@/src/assets/images/landingImage.jpg)]  bg-cover bg-center -translate-y-4">
+    <section
+      className={`h-screen w-full bg-[url(/assets/images/landingImage.jpg)] bg-cover bg-center -translate-y-4`}
+    >
       <div className="flex flex-col items-center justify-center">
         <p className="text-black text-lg lg:hidden text-center px-2 mb-24 pt-24 lg:text-3xl">
           <motion.strong

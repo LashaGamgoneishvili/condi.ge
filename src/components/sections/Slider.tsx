@@ -1,8 +1,8 @@
 "use client";
-import image1 from "@/src/assets/images/wmendax.jpg";
-import image2 from "@/src/assets/images/wmendax.jpg";
-import image3 from "@/src/assets/images/wmendax.jpg";
-import image4 from "@/src/assets/images/wmendax.jpg";
+import image1 from "../../../public/assets/images/installation.jpg";
+import image2 from "../../../public/assets/images/installation.jpg";
+import image3 from "../../../public/assets/images/installation.jpg";
+import image4 from "../../../public/assets/images/installation.jpg";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -45,8 +45,6 @@ const slides = [
 
 function Slider() {
   const [current, setCurrent] = useState(0);
-
-  console.log("current ", current);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {

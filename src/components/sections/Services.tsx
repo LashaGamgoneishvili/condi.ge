@@ -1,8 +1,8 @@
 "use client";
-import image1 from "@/src/assets/images/wmendax.jpg";
-import image2 from "@/src/assets/images/wmendax.jpg";
-import image3 from "@/src/assets/images/wmendax.jpg";
-import image4 from "@/src/assets/images/wmendax.jpg";
+import image1 from "../../../public/assets/images/installation.jpg";
+import image2 from "../../../public/assets/images/installation.jpg";
+import image3 from "../../../public/assets/images/installation.jpg";
+import image4 from "../../../public/assets/images/installation.jpg";
 import Link from "next/link";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
@@ -61,10 +61,6 @@ export default function Services() {
     const minSwipeDistance = 50;
     const distance = touchStartX - touchEndX;
 
-    console.log("distance", distance);
-    console.log("touchStartX", touchStartX);
-    console.log("touchEndX", touchEndX);
-
     if (
       distance !== touchStartX &&
       distance > minSwipeDistance &&
@@ -94,7 +90,7 @@ export default function Services() {
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="relative bg-[url(@/src/assets/images/wmendax.jpg)] h-96 w-screen rounded-2xl  bg-cover bg-center transition-all ease-in-out duration-500 "
+              className="relative bg-[url(/assets/images/installation.jpg)] h-96 w-screen rounded-2xl  bg-cover bg-center transition-all ease-in-out duration-500 "
               style={{ transform: `translateX(-${selectedIndex * 105}vw)` }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}

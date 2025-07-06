@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image4 from "@/src/assets/images/wmendax.jpg";
+import image4 from "../../../public/assets/images/installation.jpg";
 import Link from "next/link";
 
 export default function page() {
