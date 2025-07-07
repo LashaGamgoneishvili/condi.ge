@@ -1,13 +1,21 @@
 import Image from "next/image";
-import image4 from "../../../public/assets/images/installation.jpg";
+import image4 from "../../../public/assets/images/installation-service-fix.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="min-h-screen flex flex-col items-center mt-8">
-      <strong className="text-sm md:text-xl lg:text-2xl mb-4">
-        598 22 24 20 თენგიზი კობახიძე
-      </strong>
+    <div className="min-h-screen flex flex-col items-center mt-8 gap-4">
+      <Link
+        href="tel:+995598222420"
+        className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 cursor-pointer"
+      >
+        📞 დაგვიკავშირდით
+      </Link>
+      <Link href="tel:+995598222420">
+        <strong className="text-მდ md:text-xl lg:text-2xl mb-4">
+          598 22 24 20 თენგიზი კობახიძე
+        </strong>
+      </Link>
       <div className=" flex gap-4 flex-col lg:flex-row-reverse bg-white text-black px-4 py-8 md:px-16">
         {/* Image */}
         <div className="rounded-xl overflow-hidden shadow-md">

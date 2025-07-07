@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import installation from "../../../public/assets/images/installation.jpg";
+import installation from "../../../public/assets/images/installation-service-fix.png";
 import repair from "../../../public/assets/images/sheketeba.jpg";
 import cleaning from "../../../public/assets/images/wmenda.jpg";
 import addingFreon from "../../../public/assets/images/freoni.png";
@@ -50,11 +50,9 @@ const services = [
 
 export default function Page() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   function handleRoute(path: string) {
-    console.log("path", path);
-    console.log("baseUrl", baseUrl);
     redirect(`${path}`);
   }
 
@@ -78,7 +76,7 @@ export default function Page() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              className="bg-white rounded-lg shadow-md pb-5 overflow-hidden hover:shadow-lg transition-shadow duration-300"
               onMouseEnter={() => setHoveredCard(service.id)}
               onMouseLeave={() => setHoveredCard(null)}
               onClick={() => handleRoute(service.url)}

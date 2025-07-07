@@ -37,7 +37,7 @@ export default function Header() {
           lastScrollY > 250 ? "sticky" : "relative"
         } top-0 z-50 transition-transform duration-300`,
         hideNavbar ? "-translate-y-full" : "translate-y-0",
-        "flex gap-2 lg:gap-28 items-center mb-4 justify-between px-4 bg-gradient-to-br from-[#6569E0] to-[#6569E0]] w-full h-24 lg:px-16 lg:py-8 shadow-xl"
+        "flex gap-2 lg:gap-28 items-center mb-4 justify-between px-4 bg-gradient-to-br from-[#474a9d] to-blue-500 w-full h-24 lg:px-16 lg:py-8 shadow-xl"
       )}
     >
       <Link href="/" className="cursor-pointer">
@@ -108,10 +108,10 @@ export default function Header() {
           className={twMerge(
             "hidden lg:flex flex-col lg:flex-row items-center justify-between h-auto w-full",
             isOpen &&
-              "flex h-screen top-0 left-0 absolute py-18 bg-white backdrop-blur z-10 transition-all duration-500"
+              "flex h-[100dvh] top-0 left-0 justify-start gap-20 absolute py-18 bg-white backdrop-blur z-10 transition-all duration-500"
           )}
         >
-          <div className="flex flex-col lg:flex-row w-full mt-24 lg:mt-0 gap-6 lg:gap-12 items-center justify-center lg:justify-start">
+          <div className="flex flex-col lg:flex-row w-full mt-20 lg:mt-0 gap-6 lg:gap-12 items-center justify-center lg:justify-start">
             <Link
               href="/"
               className="relative text-black text-md transition-all duration-500 leading-8 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full"

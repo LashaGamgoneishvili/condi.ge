@@ -1,5 +1,5 @@
 "use client";
-import image1 from "../../../public/assets/images/installation.jpg";
+import image1 from "../../../public/assets/images/installation-service-fix.png";
 import image2 from "../../../public/assets/images/sheketeba.jpg";
 import image3 from "../../../public/assets/images/wmenda.jpg";
 import image4 from "../../../public/assets/images/freoni.png";

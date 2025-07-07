@@ -1,8 +1,5 @@
 "use client";
-import image1 from "../../../public/assets/images/installation.jpg";
-import image2 from "../../../public/assets/images/sheketeba.jpg";
-import image3 from "../../../public/assets/images/wmenda.jpg";
-import image4 from "../../../public/assets/images/freoni.png";
+import image1 from "../../../public/assets/images/installation-service-fix.png";
 import Link from "next/link";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
@@ -12,7 +9,7 @@ const slides = [
     id: 1,
     title: "კონდენციონერის მონტაჟი",
     mob: "598 - 24 - 22 -20",
-    img: image1,
+    img: "installation-service-fix.png",
     url: "/installation",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
@@ -20,7 +17,7 @@ const slides = [
     id: 2,
     title: "კონდენციონერის შეკეთება",
     mob: "598 - 24 - 22 -20",
-    img: image2,
+    img: "sheketeba.jpg",
     url: "/repair",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
@@ -28,7 +25,7 @@ const slides = [
     id: 3,
     title: "კონდენციონერი წმენდა",
     mob: "598 - 24 - 22 -20",
-    img: image3,
+    img: "wmenda.jpg",
     url: "/cleaning",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
@@ -37,7 +34,7 @@ const slides = [
     id: 4,
     title: "ფრეონის დამატება",
     mob: "598 - 24 - 22 -20",
-    img: image4,
+    img: "freoni.png",
     url: "/adding-freon",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
@@ -90,8 +87,11 @@ export default function Services() {
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="relative bg-[url(/assets/images/installation.jpg)] h-96 w-screen rounded-2xl  bg-cover bg-center transition-all ease-in-out duration-500 "
-              style={{ transform: `translateX(-${selectedIndex * 105}vw)` }}
+              className="relative h-96 w-screen rounded-2xl bg-cover bg-center transition-all ease-in-out duration-500"
+              style={{
+                transform: `translateX(-${selectedIndex * 105}vw)`,
+                backgroundImage: `url('/assets/images/${slide.img}')`,
+              }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
