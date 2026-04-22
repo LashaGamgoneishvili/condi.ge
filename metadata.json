@@ -1,0 +1,8 @@
+{
+  "name": "CONDI.GE",
+  "description": "Professional air conditioner installation, repair, and cleaning services in Georgia. expert solutions for your home and office.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

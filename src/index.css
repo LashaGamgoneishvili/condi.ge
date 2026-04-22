@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-900: #1e3a8a;
+  
+  --color-accent-teal: #14b8a6;
+  --color-accent-orange: #ea580c;
+  --color-accent-green: #22c55e;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-800 bg-[#f0f9ff] min-h-screen leading-snug;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply leading-[1.15] tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/40 backdrop-blur-md border border-white/50 shadow-sm transition-all duration-300;
+  }
+  .glass-heavy {
+    @apply bg-white/30 backdrop-blur-lg border-white/40 shadow-xl;
+  }
+
+  /* Modern Scrollbar Styles */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(30, 58, 138, 0.2) transparent;
+  }
+
+  /* Chrome, Edge, and Safari */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(30, 58, 138, 0.1);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(30, 58, 138, 0.3);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(30, 58, 138, 0.2);
+  }
+}
