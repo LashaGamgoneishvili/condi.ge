@@ -120,13 +120,6 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled, isHome }) => {
               </AnimatePresence>
             </div>
 
-            <Link
-              to="/#why-us"
-              className="hover:text-primary-600 transition-colors uppercase"
-            >
-              {t("nav.whyUs")}
-            </Link>
-
             <div className="flex items-center gap-1.5 lg:gap-3 px-2 lg:px-3 py-1 lg:py-1.5 glass rounded-full border border-white/50">
               <button
                 onClick={() => toggleLanguage("ka")}
@@ -267,9 +260,6 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled, isHome }) => {
                 </AnimatePresence>
               </div>
 
-              <Link to="/#why-us" onClick={() => setIsMenuOpen(false)}>
-                {t("nav.whyUs")}
-              </Link>
               <a
                 href="tel:+995598242220"
                 className="bg-primary-600 text-white py-4 rounded-xl text-center flex items-center justify-center gap-2 shadow-lg"
