@@ -9,6 +9,7 @@ import {
   Star,
   Clock,
 } from "lucide-react";
+import airCond2 from "../../assets/images/air-cond-2.jpg";
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ export const Hero: React.FC = () => {
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-linear-to-bl from-primary-100/50 to-transparent blur-3xl opacity-60 transition-all" />
       <div className="absolute bottom-0 left-0 -z-10 w-1/3 h-2/3 bg-blue-100/30 blur-3xl rounded-full opacity-40 translate-y-20 -translate-x-20 transition-all" />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[84rem] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -94,7 +95,7 @@ export const Hero: React.FC = () => {
           >
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary-900/10 border-8 border-white/40 backdrop-blur-sm">
               <img
-                src="https://picsum.photos/seed/clean-hvac-unit/1200/1500"
+                src={airCond2}
                 alt="Modern Air Conditioning System"
                 className="w-full h-auto object-cover aspect-video lg:aspect-4/5"
                 referrerPolicy="no-referrer"

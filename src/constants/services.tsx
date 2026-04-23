@@ -1,20 +1,19 @@
-import React from 'react';
-import { Wind, ShieldCheck, Wrench } from 'lucide-react';
-
+import { Wind, ShieldCheck, Wrench } from "lucide-react";
+import image from "../assets/images/air-cond-1.jpg";
 export const SERVICES_CONFIG = [
   {
-    id: 'cleaning',
+    id: "cleaning",
     icon: <Wind className="w-8 h-8" />,
-    image: "https://picsum.photos/seed/cleaning/800/600"
+    image: image,
   },
   {
-    id: 'installation',
+    id: "installation",
     icon: <ShieldCheck className="w-8 h-8" />,
-    image: "https://picsum.photos/seed/install/800/600"
+    image: image,
   },
   {
-    id: 'repair',
+    id: "repair",
     icon: <Wrench className="w-8 h-8" />,
-    image: "https://picsum.photos/seed/repair/800/600"
-  }
+    image: image,
+  },
 ];

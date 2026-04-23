@@ -68,7 +68,7 @@ export const WhyUs: React.FC = () => {
               </div>
               <div className="flex flex-col items-center">
                 <p className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-display text-accent-teal mb-2 tracking-tighter">
-                  15k+
+                  7k+
                 </p>
                 <p className="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-widest leading-tight">
                   {t("whyUs.stats.cleaned")}
