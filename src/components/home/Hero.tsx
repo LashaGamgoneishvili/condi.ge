@@ -15,12 +15,12 @@ export const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden">
+    <section className="relative pt-24 pb-20 md:pt-32 md:pb-40 overflow-hidden">
       {/* Decorative Gradients */}
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-linear-to-bl from-primary-100/50 to-transparent blur-3xl opacity-60 transition-all" />
       <div className="absolute bottom-0 left-0 -z-10 w-1/3 h-2/3 bg-blue-100/30 blur-3xl rounded-full opacity-40 translate-y-20 -translate-x-20 transition-all" />
 
-      <div className="max-w-[84rem] mx-auto px-6">
+      <div className="max-w-336 mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
               <Sparkles size={16} />
               <span>{t("hero.badge")}</span>
             </div>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-[1.05] mb-8 uppercase tracking-tight">
+            <h1 className="font-display text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-[1.05] mb-8 uppercase tracking-tight">
               {t("hero.title")} <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-600 to-accent-teal">
                 {t("hero.subtitle")}

@@ -24,7 +24,7 @@ export const BookingCard: React.FC = () => {
               <span className="inline-block px-4 py-1 bg-primary-100 text-primary-700 text-xs font-black uppercase tracking-widest rounded-full mb-8">
                 {t("hero.badge")}
               </span>
-              <h2 className="font-display text-4xl sm:text-5xl md:text-7xl font-black mb-8 tracking-tighter text-slate-900 uppercase leading-[0.95]">
+              <h2 className="font-display text-3xl sm:text-5xl md:text-7xl font-black mb-8 tracking-tighter text-slate-900 uppercase leading-[0.95]">
                 {t("booking.title")
                   .split(" ")
                   .map((word, i) => (

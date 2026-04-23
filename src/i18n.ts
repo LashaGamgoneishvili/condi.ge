@@ -29,7 +29,7 @@ const resources = {
             title: "Deep Cleaning",
             description:
               "Remove allergens, mold, and dust from your units to breathe cleaner air and improve efficiency.",
-            price: "From $79",
+            price: "From ₾120",
           },
           installation: {
             title: "Professional Installation",
@@ -157,7 +157,7 @@ const resources = {
             title: "ღრმა წმენდა",
             description:
               "ალერგენების, ობისა და მტვრის მოცილება თქვენი აგრეგატებიდან სუფთა ჰაერის და ეფექტურობის გასაუმჯობესებლად.",
-            price: "79 ლარიდან",
+            price: "120 ლარიდან",
           },
           installation: {
             title: "პროფესიონალური ინსტალაცია",
@@ -285,7 +285,7 @@ const resources = {
             title: "Глубокая чистка",
             description:
               "Удаление аллергенов, плесени и пыли из ваших блоков для чистого воздуха и повышения эффективности.",
-            price: "От 79 Лари",
+            price: "От 120 Лари",
           },
           installation: {
             title: "Профессиональный монтаж",

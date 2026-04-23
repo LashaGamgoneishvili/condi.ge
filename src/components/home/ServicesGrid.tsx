@@ -16,10 +16,10 @@ export const ServicesGrid: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-20 text-slate-900">
-          <h2 className="font-display text-4xl md:text-5xl font-extrabold mb-8 tracking-tight uppercase tracking-wider leading-none">
+          <h2 className="font-display text-3xl md:text-5xl font-extrabold mb-8 tracking-tight uppercase tracking-wider leading-none">
             {t("services.title")}
           </h2>
-          <p className="text-lg text-slate-600 leading-snug font-medium">
+          <p className="text-md text-slate-600 leading-snug font-medium">
             {t("services.description")}
           </p>
         </div>
