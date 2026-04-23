@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { Thermometer, Sparkles, Facebook, ArrowUpRight } from 'lucide-react';
-import { motion } from 'motion/react';
-import { SERVICES_CONFIG } from '../../constants/services';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Thermometer, Sparkles, Facebook, ArrowUpRight } from "lucide-react";
+import { motion } from "motion/react";
+import { SERVICES_CONFIG } from "../../constants/services";
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -29,9 +29,9 @@ export const Footer: React.FC = () => {
                   </span>
                 </Link>
                 <div className="w-px h-8 bg-slate-200" />
-                <motion.a 
-                  href="https://facebook.com/profile.php?id=61575836853685" 
-                  target="_blank" 
+                <motion.a
+                  href="https://www.facebook.com/profile.php?id=61574622100907"
+                  target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
                 </motion.a>
               </div>
               <p className="text-slate-500 text-sm leading-relaxed font-medium max-w-xs">
-                {t('footer.description')}
+                {t("footer.description")}
               </p>
             </div>
           </div>
@@ -50,13 +50,21 @@ export const Footer: React.FC = () => {
           {/* Quick Links Group */}
           <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 lg:col-span-2">
             <div className="space-y-6">
-              <h5 className="font-display font-bold text-sm text-slate-400 uppercase tracking-widest">{t('footer.services')}</h5>
+              <h5 className="font-display font-bold text-sm text-slate-400 uppercase tracking-widest">
+                {t("footer.services")}
+              </h5>
               <ul className="space-y-3">
                 {SERVICES_CONFIG.map((service) => (
                   <li key={service.id}>
-                    <Link to={`/services/${service.id}`} className="text-slate-600 hover:text-primary-600 transition-all text-sm font-semibold flex items-center gap-1 group uppercase">
+                    <Link
+                      to={`/services/${service.id}`}
+                      className="text-slate-600 hover:text-primary-600 transition-all text-sm font-semibold flex items-center gap-1 group uppercase"
+                    >
                       {t(`services.items.${service.id}.title`)}
-                      <ArrowUpRight size={12} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                      <ArrowUpRight
+                        size={12}
+                        className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all"
+                      />
                     </Link>
                   </li>
                 ))}
@@ -64,18 +72,26 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className="space-y-6">
-              <h5 className="font-display font-bold text-sm text-slate-400 uppercase tracking-widest">{t('footer.links')}</h5>
+              <h5 className="font-display font-bold text-sm text-slate-400 uppercase tracking-widest">
+                {t("footer.links")}
+              </h5>
               <ul className="space-y-3">
                 {[
-                  { name: t('nav.services'), link: '/#services' },
-                  { name: t('nav.whyUs'), link: '/#why-us' },
-                  { name: 'Pricing Guide', link: '#' },
-                  { name: 'Contact Support', link: '#' }
+                  { name: t("nav.services"), link: "/#services" },
+                  { name: t("nav.whyUs"), link: "/#why-us" },
+                  { name: "Pricing Guide", link: "#" },
+                  { name: "Contact Support", link: "#" },
                 ].map((item) => (
                   <li key={item.name}>
-                    <Link to={item.link} className="text-slate-600 hover:text-primary-600 transition-all text-sm font-semibold flex items-center gap-1 group">
+                    <Link
+                      to={item.link}
+                      className="text-slate-600 hover:text-primary-600 transition-all text-sm font-semibold flex items-center gap-1 group"
+                    >
                       {item.name}
-                      <ArrowUpRight size={12} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                      <ArrowUpRight
+                        size={12}
+                        className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all"
+                      />
                     </Link>
                   </li>
                 ))}
@@ -85,19 +101,33 @@ export const Footer: React.FC = () => {
 
           {/* Office Info */}
           <div className="space-y-6">
-            <h5 className="font-display font-bold text-sm text-slate-400 uppercase tracking-widest">{t('footer.hours')}</h5>
+            <h5 className="font-display font-bold text-sm text-slate-400 uppercase tracking-widest">
+              {t("footer.hours")}
+            </h5>
             <div className="space-y-3">
               <div className="flex justify-between items-center bg-white/50 border border-white/50 p-3 rounded-2xl">
-                <span className="text-xs font-bold text-slate-500 uppercase">Mon-Fri</span>
-                <span className="text-sm font-bold text-primary-600">8:00 - 20:00</span>
+                <span className="text-xs font-bold text-slate-500 uppercase">
+                  Mon-Fri
+                </span>
+                <span className="text-sm font-bold text-primary-600">
+                  8:00 - 20:00
+                </span>
               </div>
               <div className="flex justify-between items-center bg-white/50 border border-white/50 p-3 rounded-2xl">
-                <span className="text-xs font-bold text-slate-500 uppercase">Sat-Sun</span>
-                <span className="text-sm font-bold text-primary-600">9:00 - 17:00</span>
+                <span className="text-xs font-bold text-slate-500 uppercase">
+                  Sat-Sun
+                </span>
+                <span className="text-sm font-bold text-primary-600">
+                  9:00 - 17:00
+                </span>
               </div>
               <div className="flex justify-between items-center bg-accent-teal/5 border border-accent-teal/10 p-3 rounded-2xl text-accent-teal">
-                <span className="text-xs font-bold uppercase flex items-center gap-1.5"><Sparkles size={14}/> 24/7 Support</span>
-                <span className="text-[10px] font-black uppercase tracking-tighter">Active Now</span>
+                <span className="text-xs font-bold uppercase flex items-center gap-1.5">
+                  <Sparkles size={14} /> 24/7 Support
+                </span>
+                <span className="text-[10px] font-black uppercase tracking-tighter">
+                  Active Now
+                </span>
               </div>
             </div>
           </div>
@@ -106,11 +136,21 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest order-2 md:order-1">
-            &copy; 2026 CONDI.GE. {t('footer.allRights')}
+            &copy; 2026 CONDI.GE. {t("footer.allRights")}
           </p>
           <div className="flex gap-8 order-1 md:order-2">
-            <a href="#" className="text-[10px] font-black text-slate-400 hover:text-primary-600 transition-colors uppercase tracking-widest">{t('footer.privacy')}</a>
-            <a href="#" className="text-[10px] font-black text-slate-400 hover:text-primary-600 transition-colors uppercase tracking-widest">{t('footer.terms')}</a>
+            <a
+              href="#"
+              className="text-[10px] font-black text-slate-400 hover:text-primary-600 transition-colors uppercase tracking-widest"
+            >
+              {t("footer.privacy")}
+            </a>
+            <a
+              href="#"
+              className="text-[10px] font-black text-slate-400 hover:text-primary-600 transition-colors uppercase tracking-widest"
+            >
+              {t("footer.terms")}
+            </a>
           </div>
         </div>
       </div>

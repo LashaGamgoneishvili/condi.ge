@@ -155,7 +155,7 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled, isHome }) => {
           {/* Mobile Actions */}
           <div className="md:hidden flex items-center gap-2">
             <a
-              href="https://facebook.com/profile.php?id=61575836853685"
+              href="https://www.facebook.com/profile.php?id=61574622100907"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-primary-600 hover:text-primary-700 transition-colors"
